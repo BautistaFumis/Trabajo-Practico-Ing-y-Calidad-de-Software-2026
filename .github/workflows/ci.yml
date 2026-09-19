@@ -20,12 +20,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'maven'
 
       - name: Compilar y ejecutar pruebas con Maven
         run: |
           if [ -f "pom.xml" ]; then
             mvn -B clean test
           else
-            echo "Aún no existe pom.xml, verificación de CI lista."
+            echo "Aún no existe pom.xml. El proyecto Java/Maven se integrará en el Punto 7."
           fi
