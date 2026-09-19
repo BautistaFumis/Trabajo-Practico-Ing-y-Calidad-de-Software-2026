@@ -1,0 +1,31 @@
+name: Java CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build:
+    name: Build and Test (Maven & Java 17)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 17 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Compilar y ejecutar pruebas con Maven
+        run: |
+          if [ -f "pom.xml" ]; then
+            mvn -B clean test
+          else
+            echo "Aún no existe pom.xml, verificación de CI lista."
+          fi
