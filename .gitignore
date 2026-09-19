@@ -1,3 +1,13 @@
+# ==============================================================================
+# JUSTIFICACION TEORICA SGC (Punto 7b):
+# En la Gestion de la Configuracion del Software (SGC), es indispensable contar
+# con un archivo .gitignore robusto para ignorar artefactos de compilacion (target/),
+# configuraciones privadas de entornos o IDEs (.idea/, .vscode/) y archivos temporales.
+# Esto evita conflictos de merge entre desarrolladores, reduce significativamente el
+# tamano del repositorio, protege informacion o credenciales sensibles y garantiza
+# que el entorno de CI/CD construya la aplicacion a partir de un codigo fuente limpio.
+# ==============================================================================
+
 # ===== Maven & Build Target =====
 target/
 *.class
