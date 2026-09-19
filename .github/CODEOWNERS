@@ -1,0 +1,13 @@
+# Codeowners para el Trabajo Práctico de SGC - Sistema WMS y TMS
+
+# Todo el repositorio asignado por defecto al equipo completo
+* @BautistaFumis @bautimoreno10 @gcinquini @CristianLocatelli02
+
+# Configuraciones de GitHub Workflows y CI/CD
+/.github/workflows/ @BautistaFumis @bautimoreno10 @gcinquini @CristianLocatelli02
+
+# Módulo WMS (Warehouse Management System)
+/wms/ @BautistaFumis @bautimoreno10 @gcinquini @CristianLocatelli02
+
+# Módulo TMS (Transportation Management System)
+/tms/ @BautistaFumis @bautimoreno10 @gcinquini @CristianLocatelli02
