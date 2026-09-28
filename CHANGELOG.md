@@ -2,6 +2,11 @@
 
 Todas las modificaciones notables de este proyecto serán documentadas en este archivo.
 
+## [1.2.0] - Documentación
+### Agregado
+- README con la descripción del sistema, instrucciones de compilación y ejecución, endpoints, estrategia de ramas (Gitflow), versionado y convención de commits.
+- Plantilla de Pull Request (`.github/pull_request_template.md`) con los datos que debe completar quien propone un cambio.
+
 ## [1.1.0] - Nueva funcionalidad
 ### Agregado
 - Seguimiento de envíos por identificador en el módulo TMS (`GET /api/tms/envios/{idEnvio}`), con respuesta 404 para envíos inexistentes.

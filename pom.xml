@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.logistics</groupId>
 	<artifactId>wmstms</artifactId>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<name>wmstms</name>
-	<description>Sistema de Gestion Logistica (WMS y TMS) para e-Commerce - Release 1.1.0</description>
+	<description>Sistema de Gestion Logistica (WMS y TMS) para e-Commerce - Release 1.2.0</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
