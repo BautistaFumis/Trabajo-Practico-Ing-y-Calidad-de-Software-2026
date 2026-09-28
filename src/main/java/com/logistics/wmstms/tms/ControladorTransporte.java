@@ -34,14 +34,4 @@ public class ControladorTransporte {
             .map(ResponseEntity::ok)
             .orElseGet(() -> ResponseEntity.notFound().build());
     }
-
-    @GetMapping("/envios/{idEnvio}/estado")
-    public ResponseEntity<Map<String, String>> obtenerEstadoEnvio(@PathVariable String idEnvio) {
-        return servicioSeguimientoEnvios.buscarPorId(idEnvio)
-            .map(envio -> ResponseEntity.ok(Map.of(
-                "idEnvio", envio.idEnvio(),
-                "estado", envio.estado()
-            )))
-            .orElseGet(() -> ResponseEntity.notFound().build());
-    }
 }
