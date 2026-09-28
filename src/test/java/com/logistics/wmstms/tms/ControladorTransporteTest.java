@@ -27,6 +27,15 @@ class ControladorTransporteTest {
     }
 
     @Test
+    void devuelveSeguimientoParaEnvioPendienteDeDespacho() throws Exception {
+        clienteHttp.perform(get("/api/tms/envios/ENV-1003"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.idEnvio").value("ENV-1003"))
+            .andExpect(jsonPath("$.estado").value("PENDIENTE_DESPACHO"))
+            .andExpect(jsonPath("$.ubicacionActual").value("Deposito Parana"));
+    }
+
+    @Test
     void devuelveNoEncontradoParaUnEnvioDesconocido() throws Exception {
         clienteHttp.perform(get("/api/tms/envios/ENV-9999"))
             .andExpect(status().isNotFound());
